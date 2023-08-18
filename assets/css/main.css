@@ -29,6 +29,7 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
 
+	
 body {
 	line-height: 1;
 }
@@ -191,9 +192,6 @@ input, select, textarea {
 		margin-bottom: 1em;
 	}
 
-	p {
-		text-align: justify;
-	}
 
 	br.clear {
 		clear: both;
@@ -236,15 +234,36 @@ input, select, textarea {
 /* Container */
 
 	.container {
-		margin: 0 auto;
+		margin: 0 auto ;
 		max-width: 100%;
 		width: 1400px;
 	}
 
-		@media screen and (max-width: 1680px) {
+	.containerProjects {
+		margin: 0 auto ;
+		max-width: 100%;
+		width: 100%;
+	}
+
+	@media screen and (min-width: 1651px) {
+		.projectRight {
+			padding: 3em 13em 3em 13em;
+		}
+		.projectLeft {
+			padding: 3em 13em 3em 13em;
+		}
+	}
+
+		@media screen and (min-width: 1281px) and (max-width: 1650px) {
 
 			.container {
-				width: 1200px;
+				width: 100%;
+			}
+			.projectRight {
+				padding: 3em 8em 3em 8em;
+			}
+			.projectLeft {
+				padding: 3em 5em 3em 5em;
 			}
 
 		}
@@ -254,6 +273,12 @@ input, select, textarea {
 			.container {
 				width: 100%;
 			}
+			.projectRight {
+				padding: 3em 5em 3em 5em;
+			}
+			.projectLeft {
+				padding: 3em 5em 3em 5em;
+			}
 
 		}
 
@@ -261,6 +286,12 @@ input, select, textarea {
 
 			.container {
 				width: 100%;
+			}
+			.projectRight {
+				padding: 3em 5em 3em 5em;
+			}
+			.projectLeft {
+				padding: 3em 5em 3em 5em;
 			}
 
 		}
@@ -270,6 +301,12 @@ input, select, textarea {
 			.container {
 				width: 100%;
 			}
+			.projectRight {
+				padding: 3em 5em 3em 5em;
+			}
+			.projectLeft {
+				padding: 3em 5em 3em 5em;
+			}
 
 		}
 
@@ -277,6 +314,12 @@ input, select, textarea {
 
 			.container {
 				width: 100%;
+			}
+			.projectRight {
+				padding: 3em 5em 3em 5em;
+			}
+			.projectLeft {
+				padding: 3em 5em 3em 5em;
 			}
 
 		}
@@ -1749,16 +1792,62 @@ input, select, textarea {
 
 		}
 
+/* Aboutme */
+
+	/* Right side */
+		#main > header h2 {
+			display: block;
+			text-align: left;
+			margin: 0 0 0.5em 0;
+		}
+
+		.tldr {
+			background-color: black;
+			color: white;
+			padding: 2px 4px;
+		}
+
+		#main > header p {
+			display: block;
+			text-align: left;
+			font-size: 1.5em;
+			line-height: 1.5em;
+			margin: 0 0 1em 0;
+		}
+
+		.aboutmedecoding {
+			text-align: right;
+			padding: 2em 0 1em 0;
+			margin-right: 40px;
+			font-size: 1.3em;
+			font-weight: bold;
+			line-height: 170%;
+
+			
+		}
+
+		.aboutme {
+			margin-right: 40px;
+			font-size: 1.2em;
+			line-height: 170%;
+		}
+	/* Left side */
+		.profile-pic {
+			max-width: 250px;
+			width: 100%;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 1em;
+		}
+
+
+
 /* Sections/modules */
 
-	section, modules {
-		margin-bottom: 3em;
-	}
 
 
-		section > :last-child, section:last-child, article > :last-child, article:last-child {
-			margin-bottom: 0;
-		}
+		
 
 		section.special > header, section.special > footer, article.special > header, article.special > footer {
 			text-align: center;
@@ -1772,7 +1861,7 @@ input, select, textarea {
 		margin: 0 0 1em 0;
 	}
 
-		header > p {
+	#banner header > p {
 			display: block;
 			font-size: 1.5em;
 			margin: 1em 1em 2em 1em;
@@ -1945,6 +2034,110 @@ input, select, textarea {
 				ul.icons li a:hover {
 					color: #ef8376;
 				}
+
+/* Page modules */
+.module_page {
+	padding: 2em 2em 2em 2em;
+	margin-bottom: 2em;
+	margin: auto;
+}
+.iconModule {
+	width: 150px;
+	margin-top: 2em;
+}
+.center {
+    text-align: center;
+	padding: 0m 5em 2em 5em;
+}
+
+.moduleCenterTitle {
+	margin: 0.5em 0 0.5em 0;
+}
+
+.moduleCenterSub {
+	margin: 0em 0 2em 0;
+	color: #3c3c3c;
+}
+.moduleCenterDescription {
+	margin: 0 15em 2em 15em;
+	color: #000000;
+}
+.moduleCenterList {
+	margin: 0 30em 2em 30em;
+	color: #000000;
+	text-align: justify;
+	line-height: 1.5em;
+}
+
+	/* projectRight section */
+	.projectRight {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		background-color: #000000;
+		color: #ffffff;
+	}
+	
+	.headerContentRight {
+		display: flex;
+		flex-direction: column; 
+		text-align: right;
+		flex-grow: 1;
+		color: #ffffff;
+		width: 100%;
+	}
+	.projectRightTitle {
+		color: #ffffff;
+		text-align: right;
+		padding-bottom: 0.5em;
+	}
+	.projectRightSub {
+		color: #ffffff;
+		text-align: right;
+		padding-bottom: 1.5em;
+		font-size: 120%;
+	}
+	
+	.imgProjectRight {
+		margin-right: 20px;
+	}
+
+	/* projectLeft section */
+	.projectLeft {
+		display: flex;
+		align-items: center;
+		justify-content: space-between; 
+		background-color: #ffffff;
+		color: #000000;
+	}
+	
+	.headerContentLeft {
+		display: flex;
+		flex-direction: column;
+		text-align: left;
+		flex-grow: 1;
+		color: #000000;
+		width: 100%;
+	}
+	.projectLeftTitle {
+		color: #000000;
+		text-align: left;
+		padding-bottom: 0.5em;
+	}
+	.projectLeftSub {
+		color: #000000;
+		text-align: left;
+		padding-bottom: 1.5em;
+		font-size: 120%;
+	}
+	
+	.imgProjectLeft {
+		margin-right: 0;
+	}
+	
+	
+	
+	
 
 /* Form */
 
@@ -2172,8 +2365,8 @@ input, select, textarea {
 
 	.wrapper {
 		background: #fff;
-		margin: 0 0 2em 0;
-		padding: 6em 0 6em 0;
+		
+		padding: 4em 0 6em 0;
 	}
 
 		.wrapper.style2 {
@@ -2418,7 +2611,7 @@ input, select, textarea {
 	#banner {
 		background: #fff;
 		text-align: center;
-		padding: 4.5em 0 4.5em 0;
+		padding: 4.5em 3em 4.5em 3em;
 		margin-bottom: 0;
 	}
 
@@ -3160,5 +3353,59 @@ input, select, textarea {
 					.carousel article .image {
 						margin-bottom: 2em;
 					}
+
+		/* Modules Page */
+
+			/* Module center section */
+			.center {
+				padding: 1em 1em 1em 1em;
+			}
+
+			/* Project right side section */
+			.projectRight {
+				padding: 1em 2em 1em 3em;
+				flex-direction: column-reverse; /* This stacks the children vertically with the image on top */
+				align-items: end; /* Align items to the start */
+				text-align: right; /* Adjust text alignment for smaller screens */
+				-ms-flex-align: end;
+			}
+		
+			.headerContentRight {
+				text-align: right;
+				padding-top: 1em; /* Some space between the image and the text for better spacing on mobile */
+			}
+			
+			.projectRightTitle, .projectRightSub {
+				text-align: right;
+			}
+
+			.imgProjectRight {
+				-ms-flex-align: end;
+				margin-right: 0;
+				margin-left: 0;  /* Removes the margin on mobile */
+				margin-bottom: 1em;  /* Adds some space below the image for better spacing on mobile */
+			}
+
+			/* Project left side section */
+			.projectLeft {
+				padding: 1em 3em 1em 2em;
+				flex-direction: column; /* Stacks the children vertically */
+				align-items: flex-start; /* Aligns items to the start (left for column direction) */
+				text-align: left; /* Adjust text alignment for smaller screens */
+			}
+		
+			.headerContentLeft {
+				text-align: left;
+				padding-top: 1em; /* Some space between the image and the text for better spacing on mobile */
+			}
+			
+			.projectLeftTitle, .projectLeftSub {
+				text-align: left;
+			}
+			
+			.imgProjectLeft {
+				margin-right: 0;  /* Removes the margin on mobile */
+				margin-bottom: 1em;  /* Adds some space below the image for better spacing on mobile */
+			}
 
 	}
