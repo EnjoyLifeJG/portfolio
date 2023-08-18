@@ -13,3 +13,6 @@ Credits:
 
 	Template:
 		Helios by HTML5 UP | @ajlkn under the CCA 3.0 license
+
+	Module illustration pictures:
+		Unplash.com
