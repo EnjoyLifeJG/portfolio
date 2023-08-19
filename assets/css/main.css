@@ -314,6 +314,7 @@ input, select, textarea {
 
 			.container {
 				width: 100%;
+			
 			}
 			.projectRight {
 				padding: 3em 5em 3em 5em;
@@ -2057,6 +2058,8 @@ input, select, textarea {
 .moduleCenterSub {
 	margin: 0em 0 2em 0;
 	color: #3c3c3c;
+	line-height: 2em;
+	font-size: 100%;
 }
 .moduleCenterDescription {
 	margin: 0 15em 2em 15em;
@@ -2984,6 +2987,7 @@ input, select, textarea {
 				margin-bottom: 6em;
 			}
 
+
 		/* Section/Article */
 
 			section, article {
@@ -3312,7 +3316,8 @@ input, select, textarea {
 		/* Banner */
 
 			#banner {
-				padding: 3em 2em 3em 2em;
+				padding: 3em 0.2em 3em 0.2em;
+				font-size: 80%;
 			}
 
 		/* Sidebar */
@@ -3324,7 +3329,8 @@ input, select, textarea {
 		/* Main */
 
 			#main > header {
-				text-align: center;
+				text-align: left;
+				font-size: 80%;
 			}
 
 		/* Footer */
@@ -3361,6 +3367,27 @@ input, select, textarea {
 				padding: 1em 1em 1em 1em;
 			}
 
+			.moduleCenterTitle {
+				font-size: 120%;
+			}
+			
+			.moduleCenterSub {
+				margin: 0em 0 2em 0;
+				color: #3c3c3c;
+				line-height: 2em;
+				font-size: 100%;
+			}
+			.moduleCenterDescription {
+				margin: 0 0.2em 0 0.2em;
+				color: #000000;
+			}
+			.moduleCenterList {
+				margin: 2em 2em 0em 2em;
+				color: #000000;
+				text-align: justify;
+				line-height: 1.5em;
+			}
+
 			/* Project right side section */
 			.projectRight {
 				padding: 1em 2em 1em 3em;
@@ -3380,6 +3407,7 @@ input, select, textarea {
 			}
 
 			.imgProjectRight {
+				width: 100%;
 				-ms-flex-align: end;
 				margin-right: 0;
 				margin-left: 0;  /* Removes the margin on mobile */
@@ -3404,8 +3432,23 @@ input, select, textarea {
 			}
 			
 			.imgProjectLeft {
+				width: 100%;
 				margin-right: 0;  /* Removes the margin on mobile */
 				margin-bottom: 1em;  /* Adds some space below the image for better spacing on mobile */
+			}
+
+		/*Mobile - Modules Page */
+
+			/* body */
+
+			.aboutmedecoding {
+				text-align: left;
+				margin: 0 0 0 0 ;
+				font-size: 120%;
+			}
+			.aboutme {
+				text-align: left;
+				margin: 0 0 0 0;
 			}
 
 	}
