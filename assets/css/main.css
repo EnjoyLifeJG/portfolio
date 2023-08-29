@@ -1828,6 +1828,7 @@ input, select, textarea {
 		}
 
 		.aboutme {
+			text-align: justify;
 			margin-right: 40px;
 			font-size: 1.2em;
 			line-height: 170%;
@@ -2062,11 +2063,11 @@ input, select, textarea {
 	font-size: 100%;
 }
 .moduleCenterDescription {
-	margin: 0 15em 2em 15em;
+	margin: 0 7em 2em 7em;
 	color: #000000;
 }
 .moduleCenterList {
-	margin: 0 30em 2em 30em;
+	margin: 0 15em 2em 15em;
 	color: #000000;
 	text-align: justify;
 	line-height: 1.5em;
@@ -2105,6 +2106,10 @@ input, select, textarea {
 		margin-right: 20px;
 	}
 
+	.projectRightDescription {
+		padding-left: 10em;
+	}
+
 	/* projectLeft section */
 	.projectLeft {
 		display: flex;
@@ -2137,9 +2142,49 @@ input, select, textarea {
 	.imgProjectLeft {
 		margin-right: 0;
 	}
+	.projectLeftDescription {
+		padding-right: 10em;
+	}
 	
 	
-	
+	/* Project Pages */
+
+	.logoA h1 {
+		padding: 0em 0em 0.5em 0em;
+		text-align: left;
+		color: #ffffff;
+	}
+
+#project_page {
+	padding: 3em 10em 3em 5em;
+	margin-bottom: 2em;
+	margin: auto;
+	background-color: #181818;
+}
+/* .center {
+    text-align: left;
+	padding: 2em 2em 2em 5em;
+} */
+
+.projectTitle {
+	padding: 0em 0em 0.5em 0em;
+	text-align: left;
+	color: #ffffff;
+}
+
+.projectSub {
+	padding: 0em 0em 1em 0em;
+	text-align: left;
+	color: #ffffff;
+	line-height: 2em;
+	font-size: 100%;
+}
+.projectDescription {
+	padding: 0em 0em 0em 0em;
+	text-align: left;
+	color: #ffffff;
+	line-height: 3em;
+}
 	
 
 /* Form */
@@ -2843,7 +2888,7 @@ input, select, textarea {
 
 /* Wide */
 
-	@media screen and (max-width: 1680px) {
+	@media screen and (max-width: 2600px) {
 
 		/* Basic */
 
@@ -2867,6 +2912,13 @@ input, select, textarea {
 					margin: 0 1.25em 0 0;
 				}
 
+		/* Module Page */
+
+			.moduleCenterList {
+				margin: 0 30em 2em 30em;
+				text-align: justify;
+			}
+
 	}
 
 /* Normal */
@@ -2878,6 +2930,10 @@ input, select, textarea {
 			body, input, textarea, select {
 				font-size: 12pt;
 				line-height: 1.5em;
+			}
+			.moduleCenterList {
+				margin: 0 15em 2em 15em;
+				text-align: justify;
 			}
 
 		/* Wrapper */
@@ -2952,6 +3008,12 @@ input, select, textarea {
 					width: 18em;
 					margin: 0 1em 0 0;
 				}
+		
+		/* Module Page */		
+			.moduleCenterList {
+				margin: 0 15em 2em 15em;
+				text-align: justify;
+			}
 
 	}
 
@@ -3167,7 +3229,7 @@ input, select, textarea {
 				-ms-transition: -ms-transform 0.5s ease;
 				transition: transform 0.5s ease;
 				display: block;
-				height: 50vh;
+				height: 30vh;
 				left: 0;
 				overflow-y: auto;
 				position: fixed;
@@ -3200,6 +3262,8 @@ input, select, textarea {
 					color: #ddd;
 					border: 0;
 					border-top: dotted 1px rgba(255, 255, 255, 0.05);
+					text-align: center;
+					font-size: 130%;
 				}
 
 					#navPanel .link:first-child {
@@ -3447,7 +3511,7 @@ input, select, textarea {
 				font-size: 120%;
 			}
 			.aboutme {
-				text-align: left;
+				text-align: justify;
 				margin: 0 0 0 0;
 			}
 
