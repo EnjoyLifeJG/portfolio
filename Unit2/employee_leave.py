@@ -8,14 +8,14 @@
 # ---------------------------------
 
 class Employee:
-    def __init__(self, employee_id, name, annual_leave):
+    def __init__(self, employee_id, name):
         self.employee_id = employee_id  # Public variable
         self.name = name  # Public variable
-        self._annual_leave = annual_leave  # Protected variable
+        self._annual_leave = 25  # Protected variable (25 days for all employees by default)
 
     def display_details(self):
         """ Display employee's details """
-        print(f"Employee ID: {self.employee_id}")
+        print(f"\nEmployee ID: {self.employee_id}")
         print(f"Name: {self.name}")
         print(f"Annual Leave Remaining: {self._annual_leave}")
 
@@ -29,21 +29,53 @@ class Employee:
             print("Insufficient annual leave balance.")
 
 
-def main():
-    # Creating an employee for demonstration
-    emp = Employee("1234", "Jean De Souza", 25)
+def main_menu():
+    employees = {}
 
-    # Displaying employee details
-    emp.display_details()
+    while True:
+        print("\nWelcome to the Employee Management System")
+        print("\nPlease select an option:")
+        print("1. Add New Employee")
+        print("2. View Employee Details")
+        print("3. Book Annual Leave")
+        print("4. Exit")
+        choice = input("Enter your choice: ")
 
-    # Simulate booking annual leave
-    print("\nBooking 5 days of annual leave...")
-    emp.book_annual_leave(5)
+        if choice == '1':
+            employee_id = input("Enter Employee ID: ")
+            name = input("Enter Employee Name: ")
+            employees[employee_id] = Employee(employee_id, name)
+            print("Employee added successfully.")
+            input("Press Enter to return to the main menu...")
 
-    # Displaying details after booking leave
-    print("\nEmployee details after booking annual leave:")
-    emp.display_details()
+
+        elif choice == '2':
+            employee_id = input("Enter Employee ID: ")
+            if employee_id in employees:
+                employees[employee_id].display_details()
+                input("Press Enter to return to the main menu...")
+            else:
+                print("Employee not found.")
+                input("Press Enter to return to the main menu...")
 
 
-# Running the main function
-main()
+        elif choice == '3':
+            employee_id = input("Enter Employee ID: ")
+            if employee_id in employees:
+                days = int(input("Enter number of days to book: "))
+                employees[employee_id].book_annual_leave(days)
+                input("Press Enter to return to the main menu...")
+            else:
+                print("Employee not found.")
+                input("Press Enter to return to the main menu...")
+
+        elif choice == '4':
+            print("Exiting program.")
+            break
+        else:
+            print("Invalid choice. Please try again.")
+            input("Press Enter to return to the main menu...")
+
+
+# Running the main menu
+main_menu()
