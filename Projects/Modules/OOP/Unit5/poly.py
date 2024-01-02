@@ -1,3 +1,11 @@
+# Program name: Poly.py
+# By Jean-G. De Souza
+# Essex University Online
+# PG Cert in Computer Science / Module OOP / Unit 5
+# Activity instructions: Write a Python program with polymorphism that is usable within the summative assessment for the driverless car.
+
+# --------------------------
+
 class DriverlessCar:
     '''Class for a driverless Car. '''
 
