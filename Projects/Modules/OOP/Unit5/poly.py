@@ -3,26 +3,23 @@ class DriverlessCar:
 
     def __init__(self, mode="normal"):
         '''initialise a new instance of Driverless Car'''
-        self.mode = mode # ideas for later: sport, snow, normal, eco, dontSpillTheCoffee
+        self.mode = mode # ideas for later: dontSpillTheCoffee (normal by default)
         self.speed = 0
         self.status = "Stopped"
 
     def change_mode(self, new_mode):
         '''Allow user to change the car's mode. '''
-        if new_mode in ["normal", "eco"]:
+        if new_mode in ["normal", "eco", "sport"]:
             self.mode = new_mode
             print(f"Mode changed to {self.mode}.")
         else:
-            print("Invalid mode. Please choose between 'normal' or 'eco'.")
+            print("Invalid mode. Please choose between 'normal' , 'sport' or 'eco'.")
 
     def move_forward(self):
-        ''' Set the speed to [depentend of mode] and updating the status. '''
+        ''' Setspeed to 50 (Normal Mode) and updating status. Made to be overitten by subclass. '''
         self.status = "Moving"
         print("The vehicule is moving forward.")
-        if self.mode == "normal":
-            self.speed = 50
-        elif self.mode == "eco":
-            self.speed = 30
+        self.speed = 50
 
     def stop(self):
         ''' Stop the car by setting the speed to 0 and updating the status. '''
@@ -31,9 +28,18 @@ class DriverlessCar:
         print("The vehicule has stopped.")
 
     def respond_to_obstacle(self, distance):
-        """ Respond to an obstacle detected by the car. This method is intended to be
-        overridden by subclasses.
-        Args:
-            distance (float): The distance to the detected obstacle. """
-        _ = distance # Unused argument as this is a template method
-        print(f"{self.model} detects an obstacle.")
+        """ Respond to an obstacle detected by the car. """
+        self.distance = distance
+        print(f"The vehicule detected an obstacle at {distance} meters.")
+
+class EcoMode(DriverlessCar):
+    '''SubClass of DriverlessCar for Eco mode'''
+    def move_forward(self):
+        self.speed = 30
+
+class SportMode(DriverlessCar):
+    '''SubClass of DriverlessCar for Sport mode'''
+
+    def move_forward(self):
+        '''Overides the speed of move_forward of the class to a sportier speed. (To be changed from speed to acceleration in the unit 7 assignment.) '''
+        self.speed = 80
