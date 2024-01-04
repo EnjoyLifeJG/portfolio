@@ -1,7 +1,11 @@
-# By Jean-G. De Souza
-# Essex University Online
-# PG Cert in Computer Science - Module OOP: Unit 5
-# Activity instructions: Write a Python program with polymorphism that is usable within the summative assessment for the driverless car.
+'''
+By Jean-G. De Souza
+Essex University Online
+PG Cert in Computer Science - Module OOP: Unit 5
+Activity instructions:
+        Write a Python program with polymorphism that is usable
+        within the summative assessment for the driverless car.
+'''
 
 # --------------------------
 
@@ -46,7 +50,7 @@ class DriverlessCar:
             print(f"The vehicule detected an obstacle at {distance} meters. Stoping the vehicule.")
         elif distance < 30:
             self.slow_down()
-            print(f"The vehicule detected an obstacle at {distance} meters. Slowing down the vehicule.")
+            print(f"The vehicule detected an obstacle at {distance} meters. Slowing down.")
 
 
 
@@ -59,10 +63,11 @@ class EcoMode(DriverlessCar):
 class SportMode(DriverlessCar):
     '''SubClass of DriverlessCar for Sport mode'''
     def move_forward(self):
-        '''Overrides the speed of move_forward of the class to a sportier speed. (To be changed from speed to acceleration in the unit 7 assignment.) '''
+        '''Overrides the speed of move_forward of the class to a sportier speed.
+            (To be changed from speed to acceleration in the unit 7 assignment.) '''
         self.speed = 80
         print(f"The vehicle is going forward at a speed of {self.speed} KPH.")
-        
+
     def respond_to_obstacle(self, distance):
         """ Overrides the default obstacles response specifically for the Sport Mode. """
         if distance < 5:
@@ -70,7 +75,7 @@ class SportMode(DriverlessCar):
             print(f"The vehicule detected an obstacle at {distance} meters. Stoping the vehicule.")
         elif distance < 10:
             self.slow_down()
-            print(f"The vehicule detected an obstacle at {distance} meters. Slowing down the vehicule.")
+            print(f"The vehicule detected an obstacle at {distance} meters. Slowing down.")
 
 
 class DontSpillTheCoffeeMode(DriverlessCar):
@@ -78,16 +83,19 @@ class DontSpillTheCoffeeMode(DriverlessCar):
     def move_forward(self):
         '''Overrides the speed of move_forward of the class to a sportier speed. '''
         self.speed = 30
-        print("The vehicle is going forward as if there were a burning-hot cup of coffee on the driver's lap.")
-        
+        print("The vehicle is going forward as if there were a \
+              burning-hot cup of coffee on the driver's lap.")
+
     def respond_to_obstacle(self, distance):
-        """ Overrides the default obstacles response specifically for the Don't Spill The Coffee Mode. """
+        """ Overrides the default obstacles response specifically
+            for the Don't Spill The Coffee Mode. """
         if distance < 20:
             self.stop()
             print(f"The vehicule detected an obstacle at {distance} meters. Stoping the vehicule.")
         elif distance < 40:
             self.slow_down()
-            print(f"The vehicule detected an obstacle at {distance} meters. Slowing down the vehicule.")
+            print(f"The vehicule detected an obstacle at {distance} meters. \
+                  Slowing down the vehicule.")
 
 
 # -------- NOTES ----------
