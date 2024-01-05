@@ -1,9 +1,14 @@
-# By Jean-G. De Souza
-# Essex University Online
-# PG Cert in Computer Science - Module OOP: Unit 2
-# Activity instructions: Write a Python program to achieve basic employee-related functionality
-# which includes retaining employee details and allowing an employee to book a day of annual leave.
-# Extend the Python program you have now created to use protected and unprotected variables. Remember to record your findings in your e-portfolio.
+'''
+By Jean-G. De Souza
+Essex University Online
+PG Cert in Computer Science - Module OOP: Unit 2
+
+    Activity instructions:
+  " Write a Python program to achieve basic employee-related functionality which includes
+    retaining employee details and allowing an employee to book a day of annual leave.
+    Extend the Python program you have now created to use protected and unprotected variables.
+    Remember to record your findings in your e-portfolio. "
+'''
 
 # ---------------------------------
 
