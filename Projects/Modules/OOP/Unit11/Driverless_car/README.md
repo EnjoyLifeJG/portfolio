@@ -3,7 +3,7 @@ Essex University Online<br>
 PG Cert in Computer Science - Module OOP: Unit 11<br>
 The design of this software system of a driverless car focuses around three essential operations:<br>
 Obstacle Detection and Avoidance, Traffic Sign Recognition, and Automated Parking.<br>
-622 words
+569 words
 
 ## Installation
 To run this software, ensure you have Python installed on your system. Clone the repository or download the source code to your local machine.<br>
