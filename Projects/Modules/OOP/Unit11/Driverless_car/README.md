@@ -15,7 +15,11 @@ cd Driverless_car
 
 
 ## Commentary
-The design choices and the structuring of this driverless car system were focused on the principles of Object-Oriented Programming and the need for a modular, scalable, and maintainable codebase. The system is designed to support three chosen operations: Obstacle Detection and Avoidance, Traffic Sign Recognition, and Automated Parking, and is composed of seven classes, each encapsulating specific functionalities. This approach facilitates the extension, debugging, and maintenance of the system.
+The design choices and the structuring of this driverless car system were focused on the principles of
+Object-Oriented Programming and the need for a modular, scalable, and maintainable codebase.
+The system is designed to support three chosen operations: Obstacle Detection and Avoidance, Traffic Sign Recognition,
+and Automated Parking, and is composed of seven classes, each encapsulating specific functionalities.
+This approach facilitates the extension, debugging, and maintenance of the system.
 
 The “EnvironmentalDataSimulator” class was designed to mock the external environment by generating predefined data sets, ensuring that the system could be developed and tested without the need of any real-world data sources. The “generateData” method allows for easy expansion or modification of the simulated data.
 
