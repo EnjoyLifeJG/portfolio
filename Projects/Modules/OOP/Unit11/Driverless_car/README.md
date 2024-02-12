@@ -1,25 +1,20 @@
 # Driverless Car System Assignment
-Essex University Online
-PG Cert in Computer Science - Module OOP: Unit 11
-The design of this software system of a driverless car focuses around three essential operations:
-Obstacle Detection and Avoidance, Traffic Sign Recognition, and Automated Parking.
-
+Essex University Online<br>
+PG Cert in Computer Science - Module OOP: Unit 11<br>
+The design of this software system of a driverless car focuses around three essential operations:<br>
+Obstacle Detection and Avoidance, Traffic Sign Recognition, and Automated Parking.<br>
+622 words
 
 ## Installation
-To run this software, ensure you have Python installed on your system. Clone the repository or download the source code to your local machine.
+To run this software, ensure you have Python installed on your system. Clone the repository or download the source code to your local machine.<br>
 
-```bash
+```
 git clone https://https://github.com/LeCodeByJean/portfolio/tree/303c4a06d8001159eaf37bd8d0cf811929741ae5/Projects/Modules/OOP/Unit11/Driverless_car
 cd Driverless_car
-```bash
+```
 
-
-## Commentary
-The design choices and the structuring of this driverless car system were focused on the principles of
-Object-Oriented Programming and the need for a modular, scalable, and maintainable codebase.
-The system is designed to support three chosen operations: Obstacle Detection and Avoidance, Traffic Sign Recognition,
-and Automated Parking, and is composed of seven classes, each encapsulating specific functionalities.
-This approach facilitates the extension, debugging, and maintenance of the system.
+The design choices and the structuring of this driverless car system were focused on the principles of Object-Oriented Programming and the need for a modular, scalable, and maintainable codebase.
+The system is designed to support three chosen operations: Obstacle Detection and Avoidance, Traffic Sign Recognition, and Automated Parking, and is composed of seven classes, each encapsulating specific functionalities. This approach facilitates the extension, debugging, and maintenance of the system.
 
 The “EnvironmentalDataSimulator” class was designed to mock the external environment by generating predefined data sets, ensuring that the system could be developed and tested without the need of any real-world data sources. The “generateData” method allows for easy expansion or modification of the simulated data.
 
