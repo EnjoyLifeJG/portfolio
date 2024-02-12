@@ -6,11 +6,10 @@ Obstacle Detection and Avoidance, Traffic Sign Recognition, and Automated Parkin
 569 words
 
 ## Installation
-To run this software, ensure you have Python installed on your system. Clone the repository or download the source code to your local machine.<br>
+To run this software, ensure you have Python installed on your system. Clone or download the program to your local machine.<br>
 
 ```
-git clone https://https://github.com/LeCodeByJean/portfolio/tree/303c4a06d8001159eaf37bd8d0cf811929741ae5/Projects/Modules/OOP/Unit11/Driverless_car
-cd Driverless_car
+https://https://github.com/LeCodeByJean/portfolio/tree/303c4a06d8001159eaf37bd8d0cf811929741ae5/Projects/Modules/OOP/Unit11/Driverless_car
 ```
 
 The design choices and the structuring of this driverless car system were focused on the principles of Object-Oriented Programming and the need for a modular, scalable, and maintainable codebase.
