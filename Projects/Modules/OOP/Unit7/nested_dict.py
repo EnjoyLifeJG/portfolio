@@ -44,7 +44,7 @@ car_inventory.add_car("Ford", "Focus", 2020)
 car_inventory.add_car("Peugeot", "206", 2018)
 car_inventory.add_car("Peugeot", "308", 2019)
 
-# Displaying the results using the new methods
+# Displaying the results using the methods "items, keys, values"
 print("Items:", list(car_inventory.get_items()))
 print("Keys:", list(car_inventory.get_keys()))
 print("Values:", list(car_inventory.get_values()))
