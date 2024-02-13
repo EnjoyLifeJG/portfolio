@@ -25,7 +25,7 @@ class DriverlessCar:
             self.mode = new_mode
             print(f"Mode changed to {self.mode}.")
         else:
-            print("Invalid mode. Please choose between 'normal' , 'sport' or 'eco'.")
+            print("Invalid mode. Please choose between 'normal', 'sport', 'eco' or "DontSpillTheCoffee".")
 
     def move_forward(self):
         ''' Set speed to 50 (Normal Mode) and updating status. Made to be overitten by subclass. '''
@@ -94,9 +94,3 @@ class DontSpillTheCoffeeMode(DriverlessCar):
             self.slow_down()
             print(f"The vehicule detected an obstacle at {distance} meters. \
                   Slowing down the vehicule.")
-
-
-# -------- NOTES TO MYSELF ----------
-
-# Add the notion of acceleration in addition to speed, for the unit 7 assignment.
-# Add the notion of deceleration in addition to Stop and SlowDown, for the unit 7 assignment.
