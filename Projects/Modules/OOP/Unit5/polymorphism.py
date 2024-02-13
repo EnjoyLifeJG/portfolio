@@ -28,7 +28,7 @@ class DriverlessCar:
             print("Invalid mode. Please choose between 'normal' , 'sport' or 'eco'.")
 
     def move_forward(self):
-        ''' Setspeed to 50 (Normal Mode) and updating status. Made to be overitten by subclass. '''
+        ''' Set speed to 50 (Normal Mode) and updating status. Made to be overitten by subclass. '''
         self.status = "Moving"
         print("The vehicule is moving forward.")
         self.speed = 50
@@ -64,13 +64,12 @@ class EcoMode(DriverlessCar):
 class SportMode(DriverlessCar):
     '''SubClass of DriverlessCar for Sport mode'''
     def move_forward(self):
-        '''Overrides the speed of move_forward of the class to a sportier speed.
-            (To be changed from speed to acceleration in the unit 7 assignment.) '''
+        '''Override the speed of move_forward of the class to a sportier speed.'''
         self.speed = 80
         print(f"The vehicle is going forward at a speed of {self.speed} KPH.")
 
     def respond_to_obstacle(self, distance):
-        """ Overrides the default obstacles response specifically for the Sport Mode. """
+        """ Override the default obstacles response specifically for the Sport Mode. """
         if distance < 5:
             self.stop()
             print(f"The vehicule detected an obstacle at {distance} meters. Stoping the vehicule.")
@@ -82,14 +81,12 @@ class SportMode(DriverlessCar):
 class DontSpillTheCoffeeMode(DriverlessCar):
     '''SubClass of DriverlessCar for Don't Spill The Coffee mode'''
     def move_forward(self):
-        '''Overrides the speed of move_forward of the class to a sportier speed. '''
-        self.speed = 30
-        print("The vehicle is going forward as if there were a \
-              burning-hot cup of coffee on the driver's lap.")
+        '''Override the speed of move_forward of the class to a very slow speed. '''
+        self.speed = 15
+        print("The vehicle is going forward as if there were a burning-hot cup of coffee on the driver's lap.")
 
     def respond_to_obstacle(self, distance):
-        """ Overrides the default obstacles response specifically
-            for the Don't Spill The Coffee Mode. """
+        """ Override the default obstacles response specifically for the Don't Spill The Coffee Mode. """
         if distance < 20:
             self.stop()
             print(f"The vehicule detected an obstacle at {distance} meters. Stoping the vehicule.")
