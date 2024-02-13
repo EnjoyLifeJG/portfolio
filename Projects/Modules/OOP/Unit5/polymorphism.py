@@ -14,7 +14,7 @@ class DriverlessCar:
     '''Class for a driverless Car. '''
 
     def __init__(self, mode="normal"):
-        '''initialise a new instance of Driverless Car'''
+        '''initialise instance of Driverless Car'''
         self.mode = mode
         self.speed = 0
         self.status = "Stopped"
@@ -99,7 +99,7 @@ class DontSpillTheCoffeeMode(DriverlessCar):
                   Slowing down the vehicule.")
 
 
-# -------- NOTES ----------
+# -------- NOTES TO MYSELF ----------
 
 # Add the notion of acceleration in addition to speed, for the unit 7 assignment.
 # Add the notion of deceleration in addition to Stop and SlowDown, for the unit 7 assignment.
