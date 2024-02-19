@@ -135,6 +135,7 @@ input, select, textarea {
 	h2 {
 		font-size: 2.85em;
 		text-align: center;
+		padding: 1em;
 	}
 
 	h3 {
@@ -2183,6 +2184,12 @@ input, select, textarea {
 	padding: 0em 0em 0em 0em;
 	text-align: left;
 	color: #ffffff;
+	line-height: 3em;
+}
+.projectDescriptionBlack {
+	padding: 0em 10em 0em 10em;
+	text-align: center;
+	color: #1d1d1d;
 	line-height: 3em;
 }
 	
