@@ -1,0 +1,284 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>SSD - unit 7</title>
+		<link rel="stylesheet" href="assets/css/prism.css" />
+		<link rel="icon" href="images/favicon.ico" type="image/png">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="no-sidebar is-preload">
+		<div id="page-wrapper">
+
+						<!-- Header -->
+						<div id="header">
+
+							<!-- Inner -->
+								<div class="inner">
+									<header>
+										<h1><a id="logoA">Unit 7: Introduction to Operating Systems</a></h1>
+									</header>
+								</div>
+		
+									<!-- Nav -->
+								<nav id="nav">
+									<ul>
+										<li><a href="index.html">Home</a></li>
+										<li><a href="index.html#modules" class="Menu scrolly">Modules</a></li>
+										<li><a href="aboutme.html">About Me</a></li>
+										<li><a href="#footer" class="Menu scrolly">Contact</a></li>
+									</ul>
+								</nav>
+		
+						</div>
+
+			<!-- Main -->
+				
+					<!-- UNIT OVERVIEW -->
+					<div class="containerProjects">
+						<section id="project_page" class="left">
+							<header>
+								<h3 class="projectSub">
+									Unit overview:
+								</h3>
+							</header>
+							<p class="projectDescription">
+								Welcome to Week 7 where we will discuss Operating Systems (OS) and their relationships to 
+								programming languages and security. Most applications need to interact with the underlying 
+								operating system – whether it is to pick up input from a keyboard (or other input device) 
+								or to output data to a display. There are also security implications because such interactions 
+								often require the user application to link with software libraries – either supplied by 
+								the OS provider or a third party.
+							</p>
+								<br>
+
+							<h3 class="projectSub">In this unit we shall:</h3>
+								<br>
+								<ul class="projectDescription">
+									<li>Define the type and functions of a typical Operating System.</li>
+									<li>Give examples of common operating systems.</li>
+									<li>Explain the differences between processes, threads and schedulers.</li>
+									<li>Describe key approaches to make OSes more secure.</li>
+									<li>Discuss the difference between virtualisation approaches.</li>
+									<li>Advise on the differences between dynamic and shared libraries.</li>
+								</ul>
+								<br>
+							<h3 class="projectSub">On completion of this unit you will be able to:</h3>
+								<br>
+								<ul class="projectDescription">
+									<li>Describe mitigations to make operating systems more secure.</li>
+									<li>Explain some of the key risks and vulnerabilities associated with operating systems.</li>
+									<li>Outline the differences between static and dynamic libraries and when to use each.</li>
+									</ul>
+								<br><br>
+								<span style="color:	gainsboro; font-size: small;"><i>Essex University Online (2024). Course: Secure Software Development (Computer Science) March 2024. [online] www.my-course.co.uk. Available at: https://www.my-course.co.uk/course/view.php?id=11402§ion=0 [Accessed 28 May 2024].</i></span>
+						</section>		
+					</div>
+
+					<!-- ACTIVITY(IES) -->
+					<div class="projectA">
+						<section id="projectA" class="center">
+							<header>
+								<h2 class="projectA">Formative activities</h2>
+							</header>
+							<!-- ACTIVITY 1 -->
+							<h3 class="projectA" style="background-color: black; line-height: normal">Exploring a simple Python shell</h3>
+							<p class="projectDescriptionBlack">
+								Activity instructions:
+								<br>
+								In this session, you will create a command shell in Python, and then run it and answer questions about it.<br>
+								Review the blogs at Praka (2018) and Szabo (n.d.) and then <strong>create a CLI/ shell that implements the following:</strong><br>
+								<br>
+								- When you enter the command LIST it lists the contents of the current directory<br>
+								- The ADD command will add the following two numbers together and provide the result<br>
+								- The HELP command provides a list of commands available<br>
+								- The EXIT command exits the shell<br>
+								Add suitable comments to your code and add the program to your e-portfolio.<br>
+								<br>
+								<strong>Code of my program:</strong>
+							</p>
+							<pre><code class="language-python">
+								import os
+								import cmd
+
+								class MyShell(cmd.Cmd):
+									"""Simple shell CLI."""
+
+									# The command prompt string
+									prompt = "$ "
+
+									# Introduction message displayed at the start
+									intro = "Welcome to MyShell! Type HELP to list commands."
+
+									def do_LIST(self, inp):
+										"""
+										Lists the contents of the current directory.
+										"""
+										try:
+											# List all items in the current directory and print them
+											for item in os.listdir("."):
+												print(item)
+										except Exception as e:
+											# Print an error message if an exception occurs
+											print(f"Error: {e}")
+
+									def do_ADD(self, inp):
+										"""
+										Adds two numbers together and print the result.
+										"""
+										try:
+											# Split the input string to get the numbers
+											parts = inp.split()
+											if len(parts) != 2:
+												# Print usage message if the number of parts is not 2
+												print("Usage: ADD <float1> <float2>")
+												return
+											# Convert the input strings to float
+											float1 = float(parts[0])
+											float2 = float(parts[1])
+											# Calculate the result
+											result = float1 + float2
+											# Print the result
+											print(f"The result is: {result}")
+										except ValueError:
+											# Print an error message if the input values are not valid
+											print("Error: Please enter valid numbers.")
+
+									def do_HELP(self, inp):
+										"""
+										Displays the list of available commands.
+										"""
+										print("Available commands:")
+										print("LIST - List the contents of the current directory")
+										print("ADD <float1> <float2> - Add two numbers and display the result")
+										print("HELP - Display this help message")
+										print("EXIT - Exit the shell")
+
+									def do_EXIT(self, inp):
+										"""
+										Exits the shell.
+										"""
+										print("Goodbye!")
+										# Return True to exit the cmd loop
+										return True
+
+									def default(self, inp):
+										"""
+										Handles unknown commands.
+										"""
+										# Print a message indicating the command is not recognized
+										print(f"Unknown command: {inp}")
+
+								if __name__ == '__main__':
+									# Create an instance of MyShell
+									shell = MyShell()
+									# Start the command loop
+									shell.cmdloop()
+							</code></pre>
+							<br>
+							<br>
+							<br>
+							<span><strong>Exploration and output:</strong></span>
+								<br>
+								<br>
+								<br>
+								<img src="https://i.ibb.co/zmNnp6Z/Screen-Recording-2024-06-02-at-7.gif" alt="MyShell program: a simple CLI" style="width: 50%; height: auto;">
+								<br>
+								<br>
+								<br>
+								<br>
+							<!-- ACTIVITY 2 -->
+							<h3 class="projectA" style="background-color: black; line-height: normal">API for a Distributed Environment</h3>
+							<p class="projectDescriptionBlack">
+								Activity instructions:
+								<br>
+								In this session, you will create a RESTful API which can be used to create 
+								 delete user records. (Code provided) <br>
+								Responses to the [following] questions should be recorded in your e-portfolio.
+								<br>
+								<br>
+								
+
+								<strong>Question 1 - Run the API.py code. Take a screenshot of the terminal output. What command did you use to compile and run the code?</strong><br>
+								<img src="https://i.ibb.co/9tsSZC1/question1.png" alt="screenshot of API" style="width: 50%; height: auto;">
+								<br>
+								<br>
+								<strong>Question 2 - Run the following command at the terminal prompt: w3m http://127.0.0.1:5000/user/Ann<br>
+
+								What happens when this command is run, and why?</strong><br>
+								<img src="https://i.ibb.co/B6hkmCj/question-2.png" alt="screenshot of API" style="width: 50%; height: auto;">
+								<br>
+								<br>
+								<strong>Question 3 - Run the following command at the terminal prompt: w3m http://127.0.0.1:5000/user/Adam<br>
+								What happens when this command is run, and why?</strong><br>
+								User "Adam" does not exist in the database, so the API returns a "Not Found" error.<br>
+								<img src="https://i.ibb.co/41BRxKc/question3.png" alt="screenshot of API" style="width: 50%; height: auto;">
+								<br>
+								<br>
+								<strong>Question 4 - What capability is achieved by the flask library?</strong><br>
+								The Flask library handles routing and HTTP requests, allowing us to define how our app 
+								should respond to different requests. In our case specifically, Flask is used to manage 
+								a list of users through the creation, 
+								removal, update, and deletion (CRUD) of user information.
+								<br>
+								<br>
+							</p>
+						
+						
+						
+						</section>		
+					</div>
+
+				
+<!-- Footer -->
+<div id="footer">
+	<div class="container">
+		<div class="row">
+		</div>
+		<hr />
+		<div class="row">
+			<div class="col-12">
+
+				<!-- Contact -->
+					<section class="contact">
+						<header>
+							<h2>Contact</h2>
+						</header>
+						<ul class="icons">
+							<li><a href="https://github.com/LeCodeByJean" class="icon brands fa-github" target="_blank" rel="noopener noreferrer"><span class="label">Github</span></a></li>
+							<li><a href="mailto:jeangaetan.desouza@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+							<li><a href="https://www.linkedin.com/in/jean-desouza" class="icon brands fa-linkedin-in" target="_blank" rel="noopener noreferrer"><span class="label">Linkedin</span></a></li>
+						</ul>
+						<h3>Jean De Souza<br><br></h3>
+						<p>Decoding ideas | Creating reality</p>
+						<br>
+					</section>
+
+				<!-- Copyright -->
+					<div class="copyright">
+						<ul class="menu">
+							<li>&copy; Jean De Souza. All rights reserved.</li><li>Original layout by HTML5UP - Adapted by Jean 2024</li>
+						</ul>
+					</div>
+
+			</div>
+
+		</div>
+	</div>
+</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/prism.js"></script>
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

@@ -2058,19 +2058,22 @@ input, select, textarea {
 }
 
 .moduleCenterSub {
-	margin: 0em 0 2em 0;
+	text-align: left;
+	margin:  1% 1% 1% 15%;
 	color: #3c3c3c;
 	line-height: 2em;
 	font-size: 100%;
 }
 .moduleCenterDescription {
-	margin: 0 7em 2em 7em;
+	justify-content: space-between;
+	text-align: left;
+	margin:  1% 50% 1% 15%;
 	color: #000000;
 }
 .moduleCenterList {
-	margin: 0 15em 2em 15em;
+	text-align: left;
+	margin:  1% 1% 1% 15%;
 	color: #000000;
-	text-align: justify;
 	line-height: 1.5em;
 }
 
@@ -2157,7 +2160,7 @@ input, select, textarea {
 	}
 
 #project_page {
-	padding: 3em 10em 3em 5em;
+	padding: 3em 15em 3em 15em;
 	margin-bottom: 2em;
 	margin: auto;
 	background-color: #181818;
@@ -2183,16 +2186,47 @@ input, select, textarea {
 .projectDescription {
 	padding: 0em 0em 0em 0em;
 	text-align: left;
+	text-align: justify;
 	color: #ffffff;
 	line-height: 3em;
 }
-.projectDescriptionBlack {
-	padding: 0em 10em 0em 10em;
+
+#projectA {
 	text-align: center;
+	padding: 3em 5em 3em 5em;
+	margin-bottom: 2em;
+	margin: auto;
+	background-color: #ffffff;;
+}
+
+.projectDescriptionBlack {
+	text-align: left;
+	padding: 0em 10em 0em 10em;
 	color: #1d1d1d;
 	line-height: 3em;
 }
-	
+
+.unit_activity {
+	text-align: left;
+	text-justify: inter-word;
+	padding: 0em 20em 0em 20em;
+	color: #1d1d1d;
+	line-height: 3em;
+}
+
+.dropcap {
+	float: left;
+	font-size: 3em;
+	line-height: 0.6em;
+}
+
+.references {
+	text-align: left;
+	padding: 0em 20em 0em 20em;
+	color: #4e4d4d;
+	font-size: 16px;
+	line-height:1em;
+}
 
 /* Form */
 
@@ -2854,27 +2888,25 @@ input, select, textarea {
 				transform: scaleX(-1);
 			}
 
-		.carousel .reel {
-			white-space: nowrap;
-			position: relative;
-			-webkit-overflow-scrolling: touch;
-			padding: 0 2em 0 2em;
-		}
-
-		.carousel article {
-			display: inline-block;
-			width: 18em;
-			background: #fff;
-			text-align: center;
-			padding: 0 1em 3em 1em;
-			margin: 0 2em 0 0;
-			white-space: normal;
-			opacity: 1.0;
-			-moz-transition: opacity 0.75s ease-in-out;
-			-webkit-transition: opacity 0.75s ease-in-out;
-			-ms-transition: opacity 0.75s ease-in-out;
-			transition: opacity 0.75s ease-in-out;
-		}
+			.carousel .reel {
+				display: flex;
+				justify-content: center;
+				padding: 0 2em;
+				overflow-x: auto;
+				-webkit-overflow-scrolling: touch;
+			}
+			
+			.carousel article {
+				display: inline-block;
+				width: 18em;
+				background: #fff;
+				text-align: center;
+				padding: 0 1em 3em 1em;
+				margin: 0 2em;
+				white-space: normal;
+				opacity: 1.0;
+				transition: opacity 0.75s ease-in-out;
+			}
 
 			.carousel article.loading {
 				opacity: 0;
@@ -2922,7 +2954,7 @@ input, select, textarea {
 		/* Module Page */
 
 			.moduleCenterList {
-				margin: 0 30em 2em 30em;
+				margin:  1% 20% 1% 15%;
 				text-align: justify;
 			}
 
@@ -2939,7 +2971,7 @@ input, select, textarea {
 				line-height: 1.5em;
 			}
 			.moduleCenterList {
-				margin: 0 15em 2em 15em;
+				margin:  1% 20% 1% 15%;
 				text-align: justify;
 			}
 
@@ -3055,6 +3087,21 @@ input, select, textarea {
 				top: 3em;
 				margin-bottom: 6em;
 			}
+			#project_page {
+				padding: 8% 10% 8% 10%;
+			}
+
+			#projectA {
+				padding: 1em 1em 1em 1em;
+				font-size: 11pt;
+			}
+
+			.projectDescriptionBlack {
+				padding: 0em 1em 0em 1em;
+				color: #1d1d1d;
+				line-height: 3em;
+			}
+
 
 
 		/* Section/Article */

@@ -1,0 +1,180 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>SSD - unit 4</title>
+		<link rel="icon" href="images/favicon.ico" type="image/png">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="no-sidebar is-preload">
+		<div id="page-wrapper">
+
+						<!-- Header -->
+						<div id="header">
+
+							<!-- Inner -->
+								<div class="inner">
+									<header>
+										<h1><a id="logoA">Unit 4: Exploring Programming Language Concepts</a></h1>
+									</header>
+								</div>
+		
+									<!-- Nav -->
+								<nav id="nav">
+									<ul>
+										<li><a href="index.html">Home</a></li>
+										<li><a href="index.html#modules" class="Menu scrolly">Modules</a></li>
+										<li><a href="aboutme.html">About Me</a></li>
+										<li><a href="#footer" class="Menu scrolly">Contact</a></li>
+									</ul>
+								</nav>
+		
+						</div>
+
+			<!-- Main -->
+				
+					<!-- UNIT OVERVIEW -->
+					<div class="containerProjects">
+						<section id="project_page" class="left">
+							<header>
+								<h3 class="projectSub">
+									Unit overview:
+								</h3>
+							</header>
+							<p class="projectDescription">
+								Welcome to Week 4 where we will investigate and explore the effect of key programming concepts on system security. 
+								We will focus on two concepts in particular: regular expressions and recursion.
+							</p>
+								<br>
+
+							<h3 class="projectSub">In this unit we shall:</h3>
+								<br>
+								<ul class="projectDescription">
+									<li>Explore the use of regular expressions and recursion in creating software solutions.</li>
+									<li>Investigate the effects of using regular expressions and recursion on system security.</li>
+									<li>Recommend the most suitable approaches for given security requirements/ risk appetites.</li>
+								</ul>
+								<br>
+							<h3 class="projectSub">On completion of this unit you will be able to:</h3>
+								<br>
+								<ul class="projectDescription">
+									<li>Explain how and when to use regular expressions in solutions.</li>
+									<li>Describe how and when to use recursion in solutions.</li>
+									<li>Discuss the security implications of both approaches.</li>
+								</ul>
+								<br><br>
+								<span style="color:	gainsboro; font-size: small;"><i>Essex University Online (2024). Course: Secure Software Development (Computer Science) March 2024. [online] www.my-course.co.uk. Available at: https://www.my-course.co.uk/course/view.php?id=11402§ion=0 [Accessed 28 May 2024].</i></span>
+						</section>		
+					</div>
+
+					<!-- ACTIVITY(IES) -->
+					<div class="projectA">
+						<section id="projectA" class="center">
+							<header>
+								<h2 class="projectA">Formative activities</h2>
+							</header>
+							<h3 class="projectA" style="background-color: black; line-height: normal">Programming language concepts</h3>
+							<p class="projectDescriptionBlack">
+								Activity instructions:
+								<br>
+								Read Larson (2018) and Weidman (n.d.) then answer the questions below, adding them as evidence to your e-portfolio.
+								<br>
+							</p>
+							<br>
+							<br>
+							<p class="unit_activity">
+								<strong>1. What is ReDOS and what part do ‘Evil Regex’ play?</strong><br>
+								Regular expression Denial of Service (ReDOS) is a type of Denial of Service attack that exploits
+								 the inefficiencies in regex processing. It occurs when a regex engine is forced into extreme 
+								 situations, making it process inputs very slowly, often exponentially related to the input size. 
+								 This can cause a program to hang or become unresponsive for a long time.
+
+								Evil Regex patterns are specific regex patterns that can cause these slowdowns when they encounter
+								 certain crafted inputs. These patterns typically involve grouping with repetition, nested 
+								 repetitions, or alternation with overlapping. When an attacker provides a malicious input to 
+								 an Evil Regex, it triggers excessive backtracking in the regex engine, leading to a ReDOS attack.
+								 <br>
+								 <br>
+								<strong>2. What are the common problems associated with the use of regex? How can these be mitigated?</strong><br>
+
+								Backtracking Issues: Excessive backtracking can lead to performance problems and vulnerabilities 
+								like ReDOS.<br>
+								Syntax Errors: Misuse of regex syntax, such as unbalanced parentheses or incorrect use of special 
+								characters, can lead to bugs.<br>
+								Overly Permissive Patterns: Regex patterns that accept unintended inputs can cause validation 
+								failures and security issues.<br>
+								<br>
+								To mitigate these problems we can:<br>
+								Avoid Evil Regex: Avoid patterns that involve nested repetitions or excessive backtracking.
+								Use Efficient Regex Engines: Some regex engines are optimized to handle complex patterns more 
+								efficiently.<br>
+								Use Static Analysis Tools: Use tools like Automatic Checking of Regular Expressions (ACRE) to detect 
+								common regex mistakes before deployment.<br>
+								Use Test Generation Tools: Use tools like EGRET (Evil Generation of Regular Expression Tests) to 
+								generate test cases that can expose potential issues in regex patterns.
+								<br>
+								<br>
+								<strong>3. How and why could regex be used as part of a security solution?</strong><br>
+								Input Validation: Ensuring that user inputs conform to expected formats (e.g., email addresses, 
+								phone numbers) to prevent injection attacks and data corruption.<br>
+								Sanitization: Cleaning user inputs to remove potentially harmful characters or patterns 
+								before processing or storing the data.<br>
+								Detection: Identifying and filtering out malicious inputs or patterns in data streams, 
+								uch as detecting SQL injection attempts or cross-site scripting (XSS) payloads.<br>
+							</p>
+								<br>
+						</section>		
+					</div>
+
+				
+<!-- Footer -->
+<div id="footer">
+	<div class="container">
+		<div class="row">
+		</div>
+		<hr />
+		<div class="row">
+			<div class="col-12">
+
+				<!-- Contact -->
+					<section class="contact">
+						<header>
+							<h2>Contact</h2>
+						</header>
+						<ul class="icons">
+							<li><a href="https://github.com/LeCodeByJean" class="icon brands fa-github" target="_blank" rel="noopener noreferrer"><span class="label">Github</span></a></li>
+							<li><a href="mailto:jeangaetan.desouza@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+							<li><a href="https://www.linkedin.com/in/jean-desouza" class="icon brands fa-linkedin-in" target="_blank" rel="noopener noreferrer"><span class="label">Linkedin</span></a></li>
+						</ul>
+						<h3>Jean De Souza<br><br></h3>
+						<p>Decoding ideas | Creating reality</p>
+						<br>
+					</section>
+
+				<!-- Copyright -->
+					<div class="copyright">
+						<ul class="menu">
+							<li>&copy; Jean De Souza. All rights reserved.</li><li>Original layout by HTML5UP - Adapted by Jean 2024</li>
+						</ul>
+					</div>
+
+			</div>
+
+		</div>
+	</div>
+</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
