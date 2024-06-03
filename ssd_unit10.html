@@ -1,0 +1,163 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>SSD - unit 10</title>
+		<link rel="icon" href="images/favicon.ico" type="image/png">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="no-sidebar is-preload">
+		<div id="page-wrapper">
+
+						<!-- Header -->
+						<div id="header">
+
+							<!-- Inner -->
+								<div class="inner">
+									<header>
+										<h1><a id="logoA">Unit 10: From Distributed Computing to Microarchitectures</a></h1>
+									</header>
+								</div>
+		
+									<!-- Nav -->
+								<nav id="nav">
+									<ul>
+										<li><a href="index.html">Home</a></li>
+										<li><a href="index.html#modules" class="Menu scrolly">Modules</a></li>
+										<li><a href="aboutme.html">About Me</a></li>
+										<li><a href="#footer" class="Menu scrolly">Contact</a></li>
+									</ul>
+								</nav>
+		
+						</div>
+
+			<!-- Main -->
+				
+					<!-- UNIT OVERVIEW -->
+					<div class="containerProjects">
+						<section id="project_page" class="left">
+							<header>
+								<h3 class="projectSub">
+									Unit overview:
+								</h3>
+							</header>
+							<p class="projectDescription">
+								Welcome to Week 10, in which we will consider the variety of system architectures which 
+								exist today, from monolithic deployments to microservices, virtualisation, and containers. 
+								We will gain an appreciation of the reasons why the architectures have evolved in the manner 
+								that they have and recognise the security problems which can become problematic in each. 
+								As we have increasingly moved towards more distributed modes of operation, the surface which 
+								can be attacked increases. Intelligent techniques to protect the data that is being transported 
+								across these systems is needed, further increasing the drive for system security.
+							</p>
+								<br>
+
+							<h3 class="projectSub">In this unit we shall:</h3>
+								<br>
+								<ul class="projectDescription">
+									<li>Explore the evolution of system architectures, from distributed systems to microservices.</li>
+									<li>Examine the strengths and weaknesses of the variety of approaches to distributed systems.</li>
+									<li>Define the security attacks which are specific to virtual environments.</li>
+								</ul>
+								<br>
+							<h3 class="projectSub">On completion of this unit you will be able to:</h3>
+								<br>
+								<ul class="projectDescription">
+									<li>Describe a variety of distributed systems, and the pattern in which they evolved.</li>
+									<li>Discuss the security attacks that distributed systems, in particular, are vulnerable to.</li>
+									<li>Understand the ways in which virtual systems need to be protected due to the specific nature of attacks on them.</li>
+								</ul>
+								<br><br>
+								<span style="color:	gainsboro; font-size: small;"><i>Essex University Online (2024). Course: Secure Software Development (Computer Science) March 2024. [online] www.my-course.co.uk. Available at: https://www.my-course.co.uk/course/view.php?id=11402§ion=0 [Accessed 28 May 2024].</i></span>
+						</section>		
+					</div>
+
+					<!-- ACTIVITY(IES) -->
+					<div class="projectA">
+						<section id="projectA" class="center">
+							<header>
+								<h2 class="projectA">Formative activities</h2>
+							</header>
+							<h3 class="projectA" style="background-color: black; line-height: normal">Faceted Data</h3>
+							<p class="projectDescriptionBlack">
+								Activity instructions:
+								<br>
+								Read Schmitz et al (2016) article about faceted data.<br>
+								<br>
+								Do you think this is a good approach to protect systems from data leakage? What are the pros and cons?<br>
+								Create a basic outline design of how you would create such a system in Python.<br>
+								Add your answers to your e-portfolio.<br>
+								<br>
+							</p>
+							<br>
+							<br>
+							<p class="unit_activity">
+								<span class="dropcap">T</span>he concept of faceted values could be very effective in protecting systems from data leakage. Faceted values allow the same data to have different views based on the observer's privileges, which ensures that sensitive information is kept secure and dynamically enforces information flow policies.<br>
+								<br>
+								<span style="background-color: black; color: white; font-weight: bold;">Pros: </span> <br>
+								<strong>Flexibility and Security:</strong> Faceted values provide a flexible mechanism to enforce information flow policies, dynamically adjusting to the observer's permissions.<br>
+								<strong>Integration with Existing Languages:</strong> The ability to integrate faceted values as a library in Haskell without requiring changes to the language runtime is a significant advantage, making it easier to adopt in existing systems.<br>
+								<strong>Reduced Redundancy:</strong> This approach avoids the need for multiple program executions (as seen in secure multi-execution), which can improve performance and reduce redundancy.<br>
+								<br>
+								<span style="background-color: black; color: white; font-weight: bold;">Cons: </span> <br>
+								<strong>Complexity in Implementation:</strong> It’s important to note that implementing faceted values can be quite complex and may require a significant understanding of both the underlying principles and the specific programming language constructs.<br>
+								<strong>Potential for Inconsistent Behavior:</strong> If not carefully managed, the presence of different views of data can lead to inconsistent behaviour in the application, where the system behaves differently for users with different privileges.<br>
+								<strong>Difficulty in Debugging:</strong> Debugging issues related to faceted values can be challenging because it involves understanding how the data is viewed under different privilege levels and how these views interact within the application.<br>
+								<br>
+								To create a faceted system in Python, I would start by defining a data structure that can hold two versions of a value: one for authorized users (private) and one for unauthorized users (public). Then, I would develop functions to create these faceted values, ensuring that we can designate values as private or provide both a private and public view. Finally, I would implement reference cells to store these faceted values, allowing for reading and writing operations that adjust based on the user's authorization level.<br>
+							</p>
+						</section>		
+					</div>
+
+				
+<!-- Footer -->
+<div id="footer">
+	<div class="container">
+		<div class="row">
+		</div>
+		<hr />
+		<div class="row">
+			<div class="col-12">
+
+				<!-- Contact -->
+					<section class="contact">
+						<header>
+							<h2>Contact</h2>
+						</header>
+						<ul class="icons">
+							<li><a href="https://github.com/LeCodeByJean" class="icon brands fa-github" target="_blank" rel="noopener noreferrer"><span class="label">Github</span></a></li>
+							<li><a href="mailto:jeangaetan.desouza@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+							<li><a href="https://www.linkedin.com/in/jean-desouza" class="icon brands fa-linkedin-in" target="_blank" rel="noopener noreferrer"><span class="label">Linkedin</span></a></li>
+						</ul>
+						<h3>Jean De Souza<br><br></h3>
+						<p>Decoding ideas | Creating reality</p>
+						<br>
+					</section>
+
+				<!-- Copyright -->
+					<div class="copyright">
+						<ul class="menu">
+							<li>&copy; Jean De Souza. All rights reserved.</li><li>Original layout by HTML5UP - Adapted by Jean 2024</li>
+						</ul>
+					</div>
+
+			</div>
+
+		</div>
+	</div>
+</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
